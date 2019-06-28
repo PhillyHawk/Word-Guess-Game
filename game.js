@@ -1,4 +1,5 @@
-let words = ["sample", "example"];
+//set word array//
+let words = ["saturn", "voyager","asteroid","neptune", "constellation", "astronomer", "equinox"];
 
 let currentWord = "";
 
