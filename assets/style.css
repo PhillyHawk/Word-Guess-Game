@@ -7,13 +7,19 @@
   color:white;
   font-family: 'Fjalla One', sans-serif;
   position: absolute;
-  top: 20%;
+  top: 10%;
   left: 0;
   width: 100%;
 }
 #title{
-  font-size: 80px;
+  font-family: 'Faster One', cursive;
+  font-size: 100px;
   color: gold;
+}
+#description_title{
+  font-size: 40px;
+  margin-top: 10px;
+  font-family: 'Orbitron', sans-serif; 
 }
 .guess_titles{
   font-size: 24px;
@@ -21,6 +27,7 @@
   border: 3px solid gold;
   margin-right: 500px;
   margin-left: 500px;
+  background: black;
 }
 span{
   background: black;
