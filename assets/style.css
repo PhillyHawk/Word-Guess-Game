@@ -13,8 +13,17 @@
 }
 #title{
   font-size: 80px;
+  color: gold;
 }
 .guess_titles{
   font-size: 24px;
   font-family: 'Orbitron', sans-serif;
+  border: 3px solid gold;
+  margin-right: 500px;
+  margin-left: 500px;
+}
+span{
+  background: black;
+  font-size: 30px;
+  color:red;
 }
