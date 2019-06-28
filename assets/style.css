@@ -1,5 +1,5 @@
-body{
-  background-image: url("https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwi57ID1t4vjAhWTbs0KHZYLAb4QjRx6BAgBEAU&url=https%3A%2F%2Fwww.wallpaperflare.com%2Fsky-fantasy-art-outer-space-sci-fi-stars-galaxy-universe-wallpaper-qxim&psig=AOvVaw0Gk194nsed02tkijFYVdOC&ust=1561785864572373");
+/*.scoreBox{
+  margin-bottom: 600px;
 }
 h1{
   font-size: 55px;
@@ -10,4 +10,16 @@ h1{
 }
 .guess_titles{
   font-family: 'Orbitron', sans-serif;
+}*/
+.thumbnail {
+  position: relative;
+}
+
+.caption {
+  color:white;
+  font-family: 'Fjalla One', sans-serif;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 100%;
 }
