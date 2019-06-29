@@ -1,6 +1,6 @@
 //set word array//
 let words = ["saturn", "voyager", "asteroid", "neptune", "constellation", "astronomer", "equinox", "comet", "moon", "star", "andromeda"];
-
+//set global variables
 let currentWord = "";
 
 let currentLettersInWord = [];
@@ -33,10 +33,13 @@ let startGame = function(){
 }
 console.log(underscoreArray);
 //display number of guesses left//
+console.log(document.getElementById("guessesLeft"));
+console.log(guessCount);
+
 document.getElementById("guessesLeft").innerHTML=guessCount;
 
 //display user letter choosen by user//
-document.getElementById("wordBlank").innerHTML=underscoreArray.join(" ");
+document.getElementById("wordBank").innerHTML=underscoreArray.join(" ");
 
 //display users wrong letter answer//
 document.getElementById("wrongGuess").innerHTML=wrongGuessed.join(" ");
@@ -53,7 +56,7 @@ function checkUserLetter(letter){
   if(letterInWord){
     for(let j =0; j < underscore; j++){
       if(currentWord[j] === letter){
-        underScoreArray[j] = letter;
+        underscoreArray[j] = letter;
       }
     }
   }else{
