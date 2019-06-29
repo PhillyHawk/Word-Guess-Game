@@ -1,5 +1,5 @@
 //set word array//
-let words = ["saturn", "voyager","asteroid","neptune", "constellation", "astronomer", "equinox"];
+let words = ["saturn", "voyager", "asteroid", "neptune", "constellation", "astronomer", "equinox", "comet", "moon", "star", "andromeda"];
 
 let currentWord = "";
 
@@ -40,22 +40,49 @@ document.getElementById("wordBlank").innerHTML=underscoreArray.join(" ");
 //display users wrong letter answer//
 document.getElementById("wrongGuess").innerHTML=wrongGuessed.join(" ");
 
-
-
-
-
-
+ 
+//comparing user clicked to letter in word//
+function checkUserLetter(letter){
+  let letterInWord= false;
+  for (var i = 0; i < underscore; i++){
+    if(currentWord[i] === letter){
+      letterInWord = true;
+    }
+  }
+  if(letterInWord){
+    for(var j =0; j < underscore; j++){
+      if(currentWord[j] === letter){
+        underScoreArray[j] = letter;
+      }
+    }
+  }else{
+    guessCount--;
+    wrongGuessed.push(letter);
+  }
 }
- startGame();
 
-
-
-//get users letter guessed when key is pressed//
-
-
-
-
-})
-//check if answer is right//
-
-//tell user if answer is correct//
+function roundComplete(){
+   document.getElementById("guessesLeft").innerHTML=guessCount;
+   document.getElementById("wordBank").innerHTML=underscoreArray.join(" ");
+   document.getElementById("wrongGuess").innerHTML=wrongGuessed.join(" ");
+  if(currentLettersInWord.toString()===underscoreArray.toString()){
+    winCount++;
+    alert("Congrats!")
+    document.getElementById("winCount").innerHTML=winCount;
+    startGame();
+  }else if(guessCount===0){
+    lossCount++;
+    alert("try again!")
+    document.getElementById("lossCount").innerHTML=lossCount;
+    startGame();
+  }
+}
+startGame();
+document.onkeyup=function(event){
+  if(event.keyCode >= 65 && event.keyCode<=90 ){
+    let guessLetter=event.key.toLowerCase();
+    console.log(guessLetter);
+    checkUserLetter(guessLetter);
+    roundComplete();
+  }
+}
