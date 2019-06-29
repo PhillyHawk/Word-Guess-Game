@@ -30,6 +30,7 @@ let startGame = function(){
   for(let i = 0; i < underscore; i++ ){
     underscoreArray.push("_");
   }
+}
 console.log(underscoreArray);
 //display number of guesses left//
 document.getElementById("guessesLeft").innerHTML=guessCount;
@@ -44,13 +45,13 @@ document.getElementById("wrongGuess").innerHTML=wrongGuessed.join(" ");
 //comparing user clicked to letter in word//
 function checkUserLetter(letter){
   let letterInWord= false;
-  for (var i = 0; i < underscore; i++){
+  for (let i = 0; i < underscore; i++){
     if(currentWord[i] === letter){
       letterInWord = true;
     }
   }
   if(letterInWord){
-    for(var j =0; j < underscore; j++){
+    for(let j =0; j < underscore; j++){
       if(currentWord[j] === letter){
         underScoreArray[j] = letter;
       }
@@ -77,12 +78,13 @@ function roundComplete(){
     startGame();
   }
 }
+
 startGame();
-document.onkeyup=function(event){
-  if(event.keyCode >= 65 && event.keyCode<=90 ){
-    let guessLetter=event.key.toLowerCase();
-    console.log(guessLetter);
-    checkUserLetter(guessLetter);
+document.onkeyup = function(event){
+  if(event.keyCode >= 65 && event.keyCode <= 90){
+    let textContent=event.key.toLowerCase();
+    console.log(textContent); 
+    checkUserLetter(textContent);
     roundComplete();
   }
 }
